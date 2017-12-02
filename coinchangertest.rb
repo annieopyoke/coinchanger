@@ -11,4 +11,9 @@ class Testcoinchanger < Minitest::Test
 		assert_equal({}, change_maker(change))
 	end
 
+	def test_assert_that_1_returns_a_penny
+		change = 1
+		assert_equal({:penny => 1}, change_maker(change))
+	end
+
 end
