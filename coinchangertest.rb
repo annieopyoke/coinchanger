@@ -6,8 +6,9 @@ class Testcoinchanger < Minitest::Test
 		assert_equal(1, 1)
 	end
 
-	def test_assert_that_coins_total_is_75_cents
-		value = 75
-		assert_equal("valid", coin_checker(value))
-end
+	def test_assert_that_0_returns_an_empty_hash
+		change = 0
+		assert_equal({}, change_maker(change))
+	end
+
 end
